@@ -83,22 +83,28 @@ const cast = [
 
 const buildScreenshots = [
   {
-    src: villageShrineAsset.url,
-    alt: "Tashi meeting a villager beside a Bhutanese chorten in the village",
-    title: "The village shrine",
-    caption: "Tashi begins among familiar village paths, people and sacred landmarks.",
+    src: shotShrine,
+    alt: "Tashi kneeling before a Bhutanese chorten to make an offering",
+    title: "The offering at the chorten",
+    caption: "The ritual that cannot be rushed — approach, kneel, and give it the time it asks for.",
   },
   {
-    src: lakeTshomenAsset.url,
+    src: shotLake,
     alt: "Tashi standing beside Tshomen at the edge of the sacred lake",
     title: "Drakay Pangtsho",
-    caption: "The lake encounter asks the player to observe the water and its surroundings carefully.",
+    caption: "Tshomen surfaces only once the player has noticed what is wrong with the water for themselves.",
+  },
+  {
+    src: shotBridge,
+    alt: "Tashi crossing a wooden bridge over a river below a waterfall",
+    title: "On the trail",
+    caption: "Paths, rivers and a villager along the way — the world Tashi walks between the sacred sites.",
   },
   {
     src: shotGameplay,
     alt: "Tashi walking a village path in the current Godot build",
     title: "In the build",
-    caption: "A live capture from the Godot project — Tashi, the village terrain and props exactly as they render in play.",
+    caption: "A live capture from the Godot project, exactly as the game renders in play.",
   },
 ];
 
