@@ -411,17 +411,28 @@ taxi journeys, quest states and spatial rendering`,
 const editorImages: Record<string, EditorImage[]> = {
   architecture: [
     {
-      src: tilemapWorkspaceAsset.url,
-      alt: "Godot editor showing the TileMap workspace and terrain palette",
-      title: "Building the world with TileMap layers",
-      caption: "The scene workspace combines a grid-based map with reusable terrain sources and painting tools.",
+      src: shotAutoloads,
+      alt: "Godot project settings listing the Global, GameState, DialogueManager and ScreenFade autoloads",
+      title: "The four autoload singletons",
+      caption: "Global, GameState, DialogueManager and ScreenFade are registered as autoloads and drive state, dialogue and transitions everywhere.",
     },
     {
-      src: editorTabsAsset.url,
-      alt: "Godot editor toolbar with TileSet and TileMap workspaces",
-      title: "TileSet and TileMap workflow",
-      caption: "The dedicated TileSet and TileMap workspaces keep source-tile setup separate from world painting.",
-      compact: true,
+      src: shotTilemapLayers,
+      alt: "Godot scene dock showing the ground, props and cliff TileMapLayer nodes",
+      title: "Three TileMapLayer nodes per map",
+      caption: "ground carries terrain, props/yset is Y-sorted for buildings and trees, and cliff handles raised terrain.",
+    },
+    {
+      src: shotSceneTree,
+      alt: "Godot scene tree for a realm map with player, NPCs and trigger areas",
+      title: "A realm scene tree",
+      caption: "CharacterBody2D, Camera2D, Area2D triggers and AnimatedSprite2D nodes as they are assembled in a real map.",
+    },
+    {
+      src: shotTaxiRank,
+      alt: "Godot editor showing the taxi rank scene and its TravelDestination configuration",
+      title: "The roadside taxi rank",
+      caption: "One reusable taxi_rank scene, configured per map with a TravelDestination, lane offset and manual-call flag.",
     },
   ],
   art: [
@@ -430,6 +441,14 @@ const editorImages: Record<string, EditorImage[]> = {
       alt: "Godot TileSet editor showing the grass tile source and texture settings",
       title: "Preparing a terrain source",
       caption: "Tile sources are configured against the 16×16 grid before they are painted into a realm.",
+    },
+  ],
+  challenges: [
+    {
+      src: shotYsortFix,
+      alt: "Before and after of the depth-sorting fix in the Godot editor",
+      title: "The depth-sorting fix",
+      caption: "Stripping pre-baked frame_progress values from AnimatedSprite2D nodes restored engine-driven Y-sorting, now guarded by test_prop_sorting.gd.",
     },
   ],
 };
