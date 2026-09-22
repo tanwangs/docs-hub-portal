@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import tilemapWorkspaceAsset from "@/assets/godot-tilemap-workspace.png.asset.json";
 import tilesetSetupAsset from "@/assets/godot-tileset-setup.png.asset.json";
-import editorTabsAsset from "@/assets/godot-editor-tabs.png.asset.json";
+import shotAutoloads from "@/assets/shot-autoloads.png";
+import shotTilemapLayers from "@/assets/shot-tilemap-layers.png";
+import shotSceneTree from "@/assets/shot-scene-tree.png";
+import shotTaxiRank from "@/assets/shot-taxi-rank.png";
+import shotYsortFix from "@/assets/shot-ysort-fix.png";
 
 export const Route = createFileRoute("/documentation")({
   head: () => ({
