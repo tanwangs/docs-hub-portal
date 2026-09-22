@@ -94,10 +94,10 @@ const buildScreenshots = [
     caption: "The lake encounter asks the player to observe the water and its surroundings carefully.",
   },
   {
-    src: forestMonkAsset.url,
-    alt: "Tashi speaking with a monk on a forest path",
-    title: "A keeper of oral history",
-    caption: "Conversations with monks provide the fragments needed to carry the story forward.",
+    src: shotGameplay,
+    alt: "Tashi walking a village path in the current Godot build",
+    title: "In the build",
+    caption: "A live capture from the Godot project — Tashi, the village terrain and props exactly as they render in play.",
   },
 ];
 
