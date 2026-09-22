@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import heroArt from "@/assets/game-hero.jpg";
-import villageShrineAsset from "@/assets/village-shrine-scene.png.asset.json";
-import lakeTshomenAsset from "@/assets/lake-tshomen-scene.png.asset.json";
-import forestMonkAsset from "@/assets/forest-monk-scene.png.asset.json";
+import shotShrine from "@/assets/shot-shrine.png";
+import shotLake from "@/assets/shot-lake.png";
+import shotBridge from "@/assets/shot-bridge.png";
+import shotGameplay from "@/assets/shot-gameplay.png";
 import charPlayer from "@/assets/char-player.png";
 import charGuide from "@/assets/char-guide.png";
 import charAumJomo from "@/assets/char-aumjomo.png";
@@ -82,22 +83,28 @@ const cast = [
 
 const buildScreenshots = [
   {
-    src: villageShrineAsset.url,
-    alt: "Tashi meeting a villager beside a Bhutanese chorten in the village",
-    title: "The village shrine",
-    caption: "Tashi begins among familiar village paths, people and sacred landmarks.",
+    src: shotShrine,
+    alt: "Tashi kneeling before a Bhutanese chorten to make an offering",
+    title: "The offering at the chorten",
+    caption: "The ritual that cannot be rushed — approach, kneel, and give it the time it asks for.",
   },
   {
-    src: lakeTshomenAsset.url,
+    src: shotLake,
     alt: "Tashi standing beside Tshomen at the edge of the sacred lake",
     title: "Drakay Pangtsho",
-    caption: "The lake encounter asks the player to observe the water and its surroundings carefully.",
+    caption: "Tshomen surfaces only once the player has noticed what is wrong with the water for themselves.",
   },
   {
-    src: forestMonkAsset.url,
-    alt: "Tashi speaking with a monk on a forest path",
-    title: "A keeper of oral history",
-    caption: "Conversations with monks provide the fragments needed to carry the story forward.",
+    src: shotBridge,
+    alt: "Tashi crossing a wooden bridge over a river below a waterfall",
+    title: "On the trail",
+    caption: "Paths, rivers and a villager along the way — the world Tashi walks between the sacred sites.",
+  },
+  {
+    src: shotGameplay,
+    alt: "Tashi walking a village path in the current Godot build",
+    title: "In the build",
+    caption: "A live capture from the Godot project, exactly as the game renders in play.",
   },
 ];
 

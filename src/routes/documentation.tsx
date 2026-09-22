@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import tilemapWorkspaceAsset from "@/assets/godot-tilemap-workspace.png.asset.json";
-import tilesetSetupAsset from "@/assets/godot-tileset-setup.png.asset.json";
-import editorTabsAsset from "@/assets/godot-editor-tabs.png.asset.json";
+import shotTileset from "@/assets/shot-tileset.png";
+import shotAutoloads from "@/assets/shot-autoloads.png";
+import shotTilemapLayers from "@/assets/shot-tilemap-layers.png";
+import shotSceneTree from "@/assets/shot-scene-tree.png";
+import shotTaxiRank from "@/assets/shot-taxi-rank.png";
+import shotYsortFix from "@/assets/shot-ysort-fix.png";
 
 export const Route = createFileRoute("/documentation")({
   head: () => ({
@@ -392,11 +395,50 @@ taxi journeys, quest states and spatial rendering`,
           "Gemini and Ludo.ai — character reference generation; ImageColorPicker for palettes; Piskel and SpriteFlow.io for the pixel art itself",
         ],
       },
+      { kind: "h", text: "Audio & music credits" },
+      {
+        kind: "p",
+        text: "All background music and ambience is sourced from third-party creators on itch.io and freesound.org rather than composed in-house. Every creator is credited below, and each pack's licence terms are being confirmed before final submission.",
+      },
+      {
+        kind: "table",
+        head: ["Track / use", "Creator", "Pack"],
+        rows: [
+          ["Main lobby (peaceful town theme)", "angel-cintado-soundtrack.itch.io", "Fantasy Town Music"],
+          ["Jomolhari (snow town)", "angel-cintado-soundtrack.itch.io", "Fantasy Town Music"],
+          ["Drakay Pangtsho (underwater town)", "angel-cintado-soundtrack.itch.io", "Fantasy Town Music"],
+          ["Taktsang", "juanjosound.itch.io", "The Shimmering Expanse RPG Music Pack — 'Our Home'"],
+          ["Dream sequence", "mandelbo.itch.io", "Mandelbo's GDC Relief Music Pack — 'Distant Life'"],
+          ["Tutorial / village", "theoallen.itch.io", "Theo's BGM Collection — 'Forest — Under The Great Tree'"],
+        ],
+      },
+      {
+        kind: "list",
+        items: [
+          "Still to resolve: the 'Chime' sound's exact usage needs labelling — dialogue advance, interaction prompt, quest completion or the prayer bell at Taktsang",
+          "Still to resolve: state each pack's specific licence terms beside its entry rather than only the source link",
+        ],
+      },
+      { kind: "h", text: "This documentation site" },
+      {
+        kind: "p",
+        text: "Per the TechTrek 2026 guidelines, the written documentation lives as Markdown in the repository's /docs folder and is published from the public GitHub repository, with this site presenting the same material in a readable form.",
+      },
+      { kind: "h", text: "Appendices to attach" },
+      {
+        kind: "list",
+        items: [
+          "User manual",
+          "Screenshot appendix",
+          "Additional supporting materials",
+        ],
+      },
       { kind: "h", text: "References" },
       {
         kind: "list",
         items: [
           "PixelArt Forest Asset Pack by zedpxl — zedpxl.itch.io/pixelart-forest-asset-pack",
+          "Mystic Woods by Game Endeavor — game-endeavor.itch.io/mystic-woods (sprite style anchor)",
           "Godot Engine 4.7.2 — godotengine.org",
           "Source repository — github.com/tanwangs/TechTrek-2026-Samsara",
         ],
@@ -408,25 +450,44 @@ taxi journeys, quest states and spatial rendering`,
 const editorImages: Record<string, EditorImage[]> = {
   architecture: [
     {
-      src: tilemapWorkspaceAsset.url,
-      alt: "Godot editor showing the TileMap workspace and terrain palette",
-      title: "Building the world with TileMap layers",
-      caption: "The scene workspace combines a grid-based map with reusable terrain sources and painting tools.",
+      src: shotAutoloads,
+      alt: "Godot project settings listing the Global, GameState, DialogueManager and ScreenFade autoloads",
+      title: "The four autoload singletons",
+      caption: "Global, GameState, DialogueManager and ScreenFade are registered as autoloads and drive state, dialogue and transitions everywhere.",
     },
     {
-      src: editorTabsAsset.url,
-      alt: "Godot editor toolbar with TileSet and TileMap workspaces",
-      title: "TileSet and TileMap workflow",
-      caption: "The dedicated TileSet and TileMap workspaces keep source-tile setup separate from world painting.",
-      compact: true,
+      src: shotTilemapLayers,
+      alt: "Godot scene dock showing the ground, props and cliff TileMapLayer nodes",
+      title: "Three TileMapLayer nodes per map",
+      caption: "ground carries terrain, props/yset is Y-sorted for buildings and trees, and cliff handles raised terrain.",
+    },
+    {
+      src: shotSceneTree,
+      alt: "Godot scene tree for a realm map with player, NPCs and trigger areas",
+      title: "A realm scene tree",
+      caption: "CharacterBody2D, Camera2D, Area2D triggers and AnimatedSprite2D nodes as they are assembled in a real map.",
+    },
+    {
+      src: shotTaxiRank,
+      alt: "Godot editor showing the taxi rank scene and its TravelDestination configuration",
+      title: "The roadside taxi rank",
+      caption: "One reusable taxi_rank scene, configured per map with a TravelDestination, lane offset and manual-call flag.",
     },
   ],
   art: [
     {
-      src: tilesetSetupAsset.url,
-      alt: "Godot TileSet editor showing the grass tile source and texture settings",
+      src: shotTileset,
+      alt: "Godot inspector showing the ground TileMapLayer with a 16 by 16 pixel tile size",
       title: "Preparing a terrain source",
-      caption: "Tile sources are configured against the 16×16 grid before they are painted into a realm.",
+      caption: "Every tile source is configured against the 16×16 grid in the inspector before it is painted into a realm.",
+    },
+  ],
+  challenges: [
+    {
+      src: shotYsortFix,
+      alt: "Before and after of the depth-sorting fix in the Godot editor",
+      title: "The depth-sorting fix",
+      caption: "Stripping pre-baked frame_progress values from AnimatedSprite2D nodes restored engine-driven Y-sorting, now guarded by test_prop_sorting.gd.",
     },
   ],
 };
