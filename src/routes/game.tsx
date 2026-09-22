@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader";
 import heroArt from "@/assets/game-hero.jpg";
 import villageShrineAsset from "@/assets/village-shrine-scene.png.asset.json";
 import lakeTshomenAsset from "@/assets/lake-tshomen-scene.png.asset.json";
-import forestMonkAsset from "@/assets/forest-monk-scene.png.asset.json";
+import shotGameplay from "@/assets/shot-gameplay.png";
 import charPlayer from "@/assets/char-player.png";
 import charGuide from "@/assets/char-guide.png";
 import charAumJomo from "@/assets/char-aumjomo.png";
