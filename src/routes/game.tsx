@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import heroArt from "@/assets/game-hero.jpg";
-import villageShrineAsset from "@/assets/village-shrine-scene.png.asset.json";
-import lakeTshomenAsset from "@/assets/lake-tshomen-scene.png.asset.json";
+import shotShrine from "@/assets/shot-shrine.png";
+import shotLake from "@/assets/shot-lake.png";
+import shotBridge from "@/assets/shot-bridge.png";
 import shotGameplay from "@/assets/shot-gameplay.png";
 import charPlayer from "@/assets/char-player.png";
 import charGuide from "@/assets/char-guide.png";
