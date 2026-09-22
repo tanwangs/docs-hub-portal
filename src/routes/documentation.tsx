@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import tilesetSetupAsset from "@/assets/godot-tileset-setup.png.asset.json";
+import shotTileset from "@/assets/shot-tileset.png";
 import shotAutoloads from "@/assets/shot-autoloads.png";
 import shotTilemapLayers from "@/assets/shot-tilemap-layers.png";
 import shotSceneTree from "@/assets/shot-scene-tree.png";
