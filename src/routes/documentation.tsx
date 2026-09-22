@@ -476,10 +476,10 @@ const editorImages: Record<string, EditorImage[]> = {
   ],
   art: [
     {
-      src: tilesetSetupAsset.url,
-      alt: "Godot TileSet editor showing the grass tile source and texture settings",
+      src: shotTileset,
+      alt: "Godot inspector showing the ground TileMapLayer with a 16 by 16 pixel tile size",
       title: "Preparing a terrain source",
-      caption: "Tile sources are configured against the 16×16 grid before they are painted into a realm.",
+      caption: "Every tile source is configured against the 16×16 grid in the inspector before it is painted into a realm.",
     },
   ],
   challenges: [
